@@ -1,6 +1,6 @@
 ### Clone
 
-Clone this repository to my local machine (Mac)
+>Clone this repository to my local machine (Mac)
 
 ```
 git clone https://github.com/cehsieh12/group-buying.git
@@ -8,15 +8,16 @@ git clone https://github.com/cehsieh12/group-buying.git
 
 ### Setup Datebase
 
-**Create and use group_buying MySQL database**
+> **Execute MySQL**
 ```
 /usr/local/MySQL/bin/mysql -u root -p
 ```
-> Run the following code
+
+> Create and use database GroupBuy_DB
 ```
-drop database if exists group_buying;
-create database group_buying;
-use group_buying;
+drop database if exists GroupBuy_DB;
+create database GroupBuy_DB;
+use GroupBuy_DB;
 ```
 
 ### Setup App
