@@ -20,6 +20,11 @@ create database group_buying;
 use group_buying;
 ```
 
+> Quit MySQL
+```
+quit
+```
+
 ### Setup App
 
 >**Enter the project folder＊**
@@ -67,4 +72,7 @@ npm start
 ```
 Visit the application on browser with the URL: http://localhost:3000
 
+**Quit the server＊**
+
+control+C
 
