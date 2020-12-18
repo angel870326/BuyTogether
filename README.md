@@ -22,7 +22,7 @@ use group_buying;
 
 ### Setup App
 
->**Enter the project folder***
+>**Enter the project folder＊**
 
 ```
 cd /Users/angelwang/group-buying
@@ -54,7 +54,7 @@ npx sequelize init
 npx sequelize db:migrate
 ```
 
-**Activate the server***
+**Activate the server＊**
 
 ```
 npm start
