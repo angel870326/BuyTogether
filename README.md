@@ -74,5 +74,8 @@ Visit the application on browser with the URL: http://localhost:3000
 
 **Quit the server＊**
 
+```
 control+C
+```
+
 
