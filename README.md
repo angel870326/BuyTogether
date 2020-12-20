@@ -10,7 +10,7 @@ git clone https://github.com/cehsieh12/group-buying.git
 ### Setup Datebase
 
 > Execute MySQL
-系統偏好設定 -> MySQL -> Start MySQL Server
+<br/>系統偏好設定 -> MySQL -> Start MySQL Server
 ```
 /usr/local/MySQL/bin/mysql -u root -p
 ```
