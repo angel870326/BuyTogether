@@ -89,7 +89,7 @@ control+C
 ## User Interface
 
 
-|Page|Edit Scouce|
+|UI|File|
 |---|---|
 |**Login**|public / stylesheets / user.css|
 
