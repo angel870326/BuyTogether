@@ -1,3 +1,5 @@
+## Clone and Setup
+
 ### Clone
 
 >Clone this repository to my local machine (Mac)
@@ -80,4 +82,10 @@ Visit the application on browser with the URL: http://localhost:3000
 control+C
 ```
 
+
+## User Interface
+
+
+### Login
+public/stylesheets/user.css
 
