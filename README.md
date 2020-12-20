@@ -32,7 +32,7 @@ quit
 >**Enter the project folder＊**
 
 ```
-cd /Users/angelwang/group-buying
+cd /Users/angelwang/Desktop/group-buying
 ```
 
 >Install packages via npm
