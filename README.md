@@ -3,6 +3,7 @@
 >Clone this repository to my local machine (Mac)
 
 ```
+cd /Users/angelwang/Desktop
 git clone https://github.com/cehsieh12/group-buying.git
 ```
 
