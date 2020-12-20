@@ -57,9 +57,9 @@ npm install
 **Create models**
 
 ```
-npx sequelize init
 npx sequelize db:migrate
 ```
+npx sequelize init
 
 **Activate the server＊**
 
