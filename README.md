@@ -92,7 +92,7 @@ control+C
 |UI|File|
 |---|---|
 |**Main**|public / stylesheets / main.css|
-|**Login**|public / stylesheets / user.css <br/>view / login.handlebars|
+|**Login & Register **|views / login.handlebars <br/>views / register.handlebars <br/>public / stylesheets / user.css |
 |**New Group**|public / stylesheets / main.css|
 
 
