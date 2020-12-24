@@ -3,7 +3,6 @@ const router = express.Router()
 const passport = require('passport')
 const { isAuthenticated } = require('../config/auth')
 
-
 // Include Controller
 const userController = require('../controllers/user')
 // Include server-side validation
@@ -30,6 +29,5 @@ router.get('/logout', userController.getLogout)
 
 // 我的帳戶頁面
 router.get('/:uid', isAuthenticated, userController.getAccount)
-
 
 module.exports = router
