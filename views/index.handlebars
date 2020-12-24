@@ -1,196 +1,106 @@
-<!--Todo list-->
 <section id="display-container" class="rounded shadow">
   <div class="rounded position" id="display-panel">
     <h3 class="text-center py-3 all-groups">All Groups</h3>
-    <form action="/search" method="get" id="filter-panel" class="mb-1">
-      <div class="form-row">
-
-        <div class="dropdown col-4 text-center">
+    <div class="form-row">
+      <div class="dropdown col-4 text-center">
+        <form action="/search/area" method="get" id="filter-panel" class="mb-1">
           <button class="btn btn-link dropdown-toggle text-dark" type="button" id="sortDropDownMenu"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{#if filter.sort}}{{filter.sort}}{{else}}Area{{/if}}
+            {{#if filter.area}}{{filter.area}}{{else}}Area{{/if}}
           </button>
           <div class="dropdown-menu" aria-labelledby="sortDropDownMenu">
-            <input type="hidden" name="preSort" value="{{filter.sort}}">
-            <input type="submit" class="dropdown-item" name="sort" value="Taipei">
-            <input type="submit" class="dropdown-item" name="sort" value="Taoyuan">
-            <input type="submit" class="dropdown-item" name="sort" value="Hsinchu">
-            <input type="submit" class="dropdown-item" name="sort" value="Miaoli">           
-            <input type="submit" class="dropdown-item" name="sort" value="Taichung">
-            <input type="submit" class="dropdown-item" name="sort" value="Changhua">
-            <input type="submit" class="dropdown-item" name="sort" value="Nantou">
-            <input type="submit" class="dropdown-item" name="sort" value="Yunlin">
-            <input type="submit" class="dropdown-item" name="sort" value="Chiayi">
-            <input type="submit" class="dropdown-item" name="sort" value="Tainan">
-            <input type="submit" class="dropdown-item" name="sort" value="Kaohsiung">
-            <input type="submit" class="dropdown-item" name="sort" value="Pingtung">
-            <input type="submit" class="dropdown-item" name="sort" value="Yilan">
-            <input type="submit" class="dropdown-item" name="sort" value="Hualien">
-            <input type="submit" class="dropdown-item" name="sort" value="Taitung">
-            <input type="submit" class="dropdown-item" name="sort" value="Penghu">
-            <input type="submit" class="dropdown-item" name="sort" value="Green Island & Orchid Island">
-            <input type="submit" class="dropdown-item" name="sort" value="Kinmen & Matsu">
+            <input type="submit" class="dropdown-item" name="area" value="Taipei">
+            <input type="submit" class="dropdown-item" name="area" value="Taoyuan">
+            <input type="submit" class="dropdown-item" name="area" value="Hsinchu">
+            <input type="submit" class="dropdown-item" name="area" value="Miaoli">
+            <input type="submit" class="dropdown-item" name="area" value="Taichung">
+            <input type="submit" class="dropdown-item" name="area" value="Changhua">
+            <input type="submit" class="dropdown-item" name="area" value="Nantou">
+            <input type="submit" class="dropdown-item" name="area" value="Yunlin">
+            <input type="submit" class="dropdown-item" name="area" value="Chiayi">
+            <input type="submit" class="dropdown-item" name="area" value="Tainan">
+            <input type="submit" class="dropdown-item" name="area" value="Kaohsiung">
+            <input type="submit" class="dropdown-item" name="area" value="Pingtung">
+            <input type="submit" class="dropdown-item" name="area" value="Yilan">
+            <input type="submit" class="dropdown-item" name="area" value="Hualien">
+            <input type="submit" class="dropdown-item" name="area" value="Taitung">
+            <input type="submit" class="dropdown-item" name="area" value="Penghu">
+            <input type="submit" class="dropdown-item" name="area" value="Green Island & Orchid Island">
+            <input type="submit" class="dropdown-item" name="area" value="Kinmen & Matsu">
             <div class="dropdown-divider"></div>
-            <input type="submit" class="dropdown-item" name="doneReset" value="Reset">
+            <a href="/" class="dropdown-item">Reset</a>
           </div>
-        </div>
-
-        <div class="dropdown col-4 text-center">
+        </form>
+      </div>
+      <div class="dropdown col-4 text-center">
+        <form action="/search/date" method="get" id="filter-panel" class="mb-1">
           <button class="btn btn-link dropdown-toggle text-dark" type="button" id="dateDropDownMenu"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{#if filter.dueDate}}{{filter.dueDate}}{{else}}Deadline{{/if}}
+            {{#if filter.deadline}}{{filter.deadline}}{{else}}Date Order{{/if}}
           </button>
           <div class="dropdown-menu" aria-labelledby="dateDropDownMenu">
-            <input type="hidden" name="preDate" value="{{filter.dueDate}}">
-            <input type="submit" class="dropdown-item" name="date" value="24 hours">
-            <input type="submit" class="dropdown-item" name="date" value="3 days">
-            <input type="submit" class="dropdown-item" name="date" value="A week">
+            <input type="submit" class="dropdown-item" name="date" value="Furthest date">
+            <input type="submit" class="dropdown-item" name="date" value="Closest date">
             <div class="dropdown-divider"></div>
-            <input type="submit" class="dropdown-item" name="dateReset" value="Reset">
+            <a href="/" class="dropdown-item">Reset</a>
           </div>
-        </div>
-
-        <div class="dropdown col-4 text-center">
+        </form>
+      </div>
+      <div class="dropdown col-4 text-center">
+        <form action="/search/category" method="get" id="filter-panel" class="mb-1">
           <button class="btn btn-link dropdown-toggle text-dark" type="button" id="statusDropDownMenu"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{#if filter.status}}{{filter.status}}{{else}}Category{{/if}}
+            {{#if filter.category}}{{filter.category}}{{else}}Category{{/if}}
           </button>
           <div class="dropdown-menu" aria-labelledby="statusDropDownMenu">
-            <input type="hidden" name="preDone" value="{{filter.status}}">
             <input type="submit" class="dropdown-item" name="category" value="Food">
             <input type="submit" class="dropdown-item" name="category" value="Daily Supplies">
             <input type="submit" class="dropdown-item" name="category" value="Apparel">
             <input type="submit" class="dropdown-item" name="category" value="Entertainment">
             <input type="submit" class="dropdown-item" name="category" value="Others">
             <div class="dropdown-divider"></div>
-            <input type="submit" class="dropdown-item" name="doneReset" value="Reset">
+            <a href="/" class="dropdown-item">Reset</a>
           </div>
-        </div>
+        </form>
       </div>
-    </form>
+    </div>
     <hr>
-    <div class="todo-list">
+    <div class="group-list">
       <div class="row animated bounceInUp">
         <div class="card-columns">
-
-          {{#each posts}}
+          {{#each groups}}
           <div class="col">
-            <div class="card bg-light mb-3">
+            <div class="card card-dec bg-light mb-3">
               <div class="card-body">
-                <h5 class="card-title">{{this.title}}</h5>
+                <h5 class="card-title">{{this.name}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{this.category}}</h6>
-                <p class="card-text">{{this.content}}</p>
-                <a href="/posts/view/{{this.id}}" class="card-link btn-block">+1</a>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: {{progressBar this.number this.maxNum}}%;"
+                    aria-valuenow="{{progressBar this.number this.maxNum}}" aria-valuemin="0" aria-valuemax="100">
+                    {{progressBar this.number this.maxNum}}%
+                  </div>
+                </div>
+                <p class="card-text">
+                  Deadline: {{this.deadline}}<br />
+                  Min number: {{this.minNum}}<br />
+                  Max number: {{this.maxNum}}<br />
+                  Area: {{this.addr}}<br />
+                  Contact information: {{this.contactInfo}}<br />
+                  Number now: {{this.number}}<br />
+                </p>
+                <a href="/groups/view/{{this.id}}" class="card-link btn-block">+1</a>
               </div>
             </div>
           </div>
           {{/each}}
-
- {{!-- {{ Example Groups }} --}}
-          <div class="col">
-            <div class="card bg-light mb-3">
-              <div class="card-body">
-                <h5 class="card-title">星巴克買一送一</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Food</h6>
-                <p class="card-text">
-                  Deadline: 2020/12/31<br/>
-                  Min number: 2<br/>
-                  Max number: 2<br/>
-                  Area: 文山區, Taipei<br/>
-                  Contact information: phone<br/>
-                  Number now: 1<br/>
-                </p>
-                <a href="/posts/view/{{this.id}}" class="card-link btn-block">+1</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card bg-light mb-3">
-              <div class="card-body">
-                <h5 class="card-title">星巴克買一送一</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Food</h6>
-                <p class="card-text">
-                  Deadline: 2020/12/31<br/>
-                  Min number: 2<br/>
-                  Max number: 2<br/>
-                  Area: 文山區, Taipei<br/>
-                  Contact information: phone<br/>
-                  Number now: 1<br/>
-                </p>
-                <a href="/posts/view/{{this.id}}" class="card-link btn-block">+1</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card bg-light mb-3">
-              <div class="card-body">
-                <h5 class="card-title">星巴克買一送一</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Food</h6>
-                <p class="card-text">
-                  Deadline: 2020/12/31<br/>
-                  Min number: 2<br/>
-                  Max number: 2<br/>
-                  Area: 文山區, Taipei<br/>
-                  Contact information: phone<br/>
-                  Number now: 1<br/>
-                </p>
-                <a href="/posts/view/{{this.id}}" class="card-link btn-block">+1</a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-
-      {{!--
-      {{#each posts}}
-      <div class="row animated bounceInUp">
-        <a href="/posts/view/{{this.id}}" class="col-9 d-flex align-items-center">
-          <label class="input-container m-0">
-            <input type="checkbox" name="done" id="done" {{#if this.done}}checked{{/if}} disabled>
-            <span class="checkmark"></span>
-            <div class="ml-4 pl-2">
-              <h4 class="m-0 p-0">{{this.name}}</h4>
-              <small class="d-block">{{this.dataValues.dueDate}}</small>
-            </div>
-          </label>
-        </a>
-        <div class="col-3 d-flex align-items-center">
-          <a href="/todos/edit/{{this.id}}" class="mr-2"><i class="fas fa-edit"></i></a>
-          <button type="button" class="delete-btn" data-toggle="modal" data-target="#d{{this.id}}">
-            <i class="fas fa-trash"></i>
-          </button>
-          <div class="modal fade delete-modal" id="d{{this.id}}" tabindex="-1" role="dialog"
-            aria-labelledby="Model for delete warning" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header border-0 pb-1">
-                  <h5 class="modal-title" id="exampleModalCenterTitle"><i
-                      class="fas fa-exclamation-triangle mr-2 text-danger"></i>Delete Confirmation</h5>
-                </div>
-                <div class="modal-body">
-                  <small>You sure want to delete "{{this.name}}"?</small>
-                </div>
-                <div class="modal-footer delete-model-btns border-0 pt-1">
-                  <button type="button" id="delete-model-back" data-dismiss="modal">Go back</button>
-                  <form action="todos/delete/{{this.id}}?_method=DELETE" method="post" class="m-0">
-                    <!--CSRF token-->
-                    <input type="hidden" name="_csrf" value="{{../csrfToken}}">
-                    <button type="submit" id="delete-model-delete">Delete</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{/each}} --}}
-
-      {{#if noPost}}
-      <div class="row align-items-center justify-content-center text-muted">
-        <i class="far fa-smile-beam pr-1"></i>No Ad Now!
-      </div>
-      {{/if}}
     </div>
+    {{#if noPost}}
+    <div class="row align-items-center justify-content-center text-muted">
+      <i class="far fa-smile-beam pr-1"></i>No Group Now!
+    </div>
+    {{/if}}
+  </div>
   </div>
 </section>

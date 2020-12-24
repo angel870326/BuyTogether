@@ -1,1 +1,143 @@
-<h1>test</h1>
+<!-- Account -->
+
+<section id="display-container" class="rounded shadow">
+  <div class="rounded position" id="display-panel">
+    <h3 class="text-center py-3 my-account">My Account</h3>
+    <div class="form-row">
+
+      <!-- Personal Information -->
+      <div class="col-6" id="hidden-panel">
+        <label class="account-title">Personal Information</label>
+        <table class="table-account">
+          <tr>
+            <td>ID: </td>
+            <td>{{user.id}}</td>
+          </tr>
+          <tr>
+            <td>First name: </td>
+            <td>{{user.Fname}}</td>
+          </tr>
+          <tr>
+            <td>Last name: </td>
+            <td>{{user.Lname}}</td>
+          </tr>
+          <tr>
+            <td>Address: </td>
+            <td>{{user.address}}</td>
+          </tr>
+          <tr>
+            <td>Phone: </td>
+            <td>{{user.phone}}</td>
+          </tr>
+          <tr>
+            <td>Email: </td>
+            <td>{{user.email}}</td>
+          </tr>
+          <tr>
+            <td>Birth: </td>
+            <td>{{user.Birth}}</td>
+          </tr>
+          <tr>
+            <td>Gender: </td>
+            <td>{{user.gender}}</td>
+          </tr>
+          <tr>
+            <td>Account balance: </td>
+            <td>{{user.amount}}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="" class="card-link btn-block btn-deposit">Deposit</a></td>
+          </tr>
+
+        </table>
+
+      </div>
+
+      <!-- Groups -->
+      <div class="col-6" id="hidden-panel">
+
+        <!-- Groups I Initiate -->
+        <label class="account-title">Groups I initiate</label>
+        <div class="group-list">
+          <div class="row animated bounceInRight">
+            <div class="card-columns">
+
+              {{#each initGroups}}
+              <div class="col">
+                <div class="card card-dec bg-light mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{this.category}}</h6>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: {{progressBar this.number this.maxNum}}%;" aria-valuenow="{{progressBar this.number this.maxNum}}" aria-valuemin="0" aria-valuemax="100">
+                        {{progressBar this.number this.maxNum}}%
+                      </div>
+                    </div>
+                    <p class="card-text">
+                      Deadline: {{this.deadline}}<br />
+                      Min number: {{this.minNum}}<br />
+                      Max number: {{this.maxNum}}<br />
+                      Area: {{this.addr}}<br />
+                      Contact information: {{this.contactInfo}}<br />
+                      Number now: {{this.number}}<br />
+                    </p>
+                    <a href="/groups/view/{{this.id}}" class="card-link btn-block">Details</a>
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            {{#if noInitGroup}}
+            <div class="row align-items-center justify-content-center text-muted text-sm">
+              <i class="far fa-smile-beam pr-1 text-sm"></i>
+              <label class="text-sm">No Group Now!</label>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+
+        <br />
+
+        <!-- Groups I Join -->
+        <label class="account-title">Groups I Join</label>
+        <div class="group-list">
+          <div class="row animated bounceInRight">
+            <div class="card-columns">
+              {{#each joinGroups}}
+              <div class="col">
+                <div class="card card-dec bg-light mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{this.category}}</h6>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: {{progressBar this.number this.maxNum}}%;" aria-valuenow="{{progressBar this.number this.maxNum}}" aria-valuemin="0" aria-valuemax="100">
+                        {{progressBar this.number this.maxNum}}%
+                      </div>
+                    </div>
+                    <p class="card-text">
+                      Deadline: {{this.deadline}}<br />
+                      Min number: {{this.minNum}}<br />
+                      Max number: {{this.maxNum}}<br />
+                      Area: {{this.addr}}<br />
+                      Contact information: {{this.contactInfo}}<br />
+                      Number now: {{this.number}}<br />
+                    </p>
+                    <a href="/groups/view/{{this.id}}" class="card-link btn-block">Details</a>
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            {{#if nojoinGroup}}
+            <div class="row align-items-center justify-content-center text-muted text-sm">
+              <i class="far fa-smile-beam pr-1 text-sm"></i>
+              <label class="text-sm">No Group Now!</label>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

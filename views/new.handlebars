@@ -1,50 +1,45 @@
-<!--New todo-->
-<section id="display-container" class="position-relative rounded shadow">
+<section id="display-container" class="position-relative rounded shadow animated bounceIn">
   <div class="rounded" id="display-panel">
     <h3 class="text-center pt-3 new-group">New Group</h3>
     <!--Flash message-->
     {{> messages}}
 
-    <form action="/posts/new" method="post" class="pt-3 needs-validation" novalidate>
+    <form action="/groups/new" method="post" class="pt-3 needs-validation" novalidate>
       <!--CSRF token-->
       <input type="hidden" name="_csrf" value="{{csrfToken}}">
-
       <!--Form-->
-
-      <!--Title-->
+      <!--Group Name-->
       <div class="form-group form-group-newcss mt-2">
         <small class="tool-tip name-tip">Group Name</small>
-        <label for="title" class="sr-only">Group Name</label>
-        <input type="text" class="form-control form-control-newcss" id="title" name="title" placeholder="Create your group name" minlength="1"
-          value="{{post.title}}" required>
+        <label for="name" class="sr-only">Group Name</label>
+        <input type="text" class="form-control form-control-newcss" id="name" name="name"
+          placeholder="Create your group name" minlength="1" value="{{group.name}}" required>
         <div class="invalid-feedback">
           Please fill in your group name!
         </div>
       </div>
-
- 
       <div class="form-row form-row-newcss">
-        <!--Category-->
-        <div class="col-md-4 col-sm-12 tool-tip-container animateField">
+        <!-- Category -->
+        <div class="col-md-4 col-sm-12">
           <small class="tool-tip date-tip">Category</small>
           <label for="category" class="sr-only">Category</label>
           <select class="form-control form-control-newcss" id="category" name="category">
-            <option value="food">Food</option>
-            <option value="supplies">Daily Supplies</option>
-            <option value="apparel">Apparel</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="others">Others</option>
+            <option value="Food">Food</option>
+            <option value="Daily Supplies">Daily Supplies</option>
+            <option value="Apparel">Apparel</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Others">Others</option>
           </select>
           <div class="invalid-feedback">
             Please fill in!
           </div>
         </div>
 
-        <!--Area-->
-        <div class="col-md-4 col-sm-12 tool-tip-container animateField">
+        <!-- Area -->
+        <div class="col-md-4 col-sm-12">
           <small class="tool-tip date-tip">Area</small>
-          <label for="category" class="sr-only">Area</label>
-          <select class="form-control form-control-newcss" id="category" name="category">
+          <label for="addr" class="sr-only">Area</label>
+          <select class="form-control form-control-newcss" id="addr" name="addr">
             <option value="Taipei">Taipei</option>
             <option value="Taoyuan">Taoyuan</option>
             <option value="Hsinchu">Hsinchu</option>
@@ -70,49 +65,47 @@
         </div>
 
         <!--Due Date-->
-        <div class="col-md-4 col-sm-12 tool-tip-container animateField">
+        <div class="col-md-4 col-sm-12">
           <small class="tool-tip date-tip">Due Date</small>
-          <label for="dueDate" class="sr-only">Due Date</label>
-          <input type="date" class="form-control form-control-newcss pr-1" id="dueDate" name="dueDate" value="{{post.dueDate}}"
-            min="2020-12-29" max="2025-12-31" required>
+          <label for="deadline" class="sr-only">Due Date</label>
+          <input type="date" class="form-control form-control-newcss pr-1" id="deadline" name="deadline"
+            value="{{group.deadline}}" min="2020-12-29" max="2025-12-31" required>
           <div class="invalid-feedback">
             When is due?
           </div>
         </div>
-
       </div>
 
       <br>
 
       <div class="form-row form-row-newcss">
-
         <!-- Minimum Number of People -->
-        <div class="col-md-4 col-sm-12 tool-tip-container animateField">
+        <div class="col-md-4 col-sm-12">
           <small class="tool-tip date-tip">Minimum Number of People</small>
-          <label for="numberOfPeople" class="sr-only">>Minimum Number of People</label>
-          <input type="number" class="form-control form-control-newcss pr-1" id="numberOfPeople" name="numberOfPeople"
-            value="{{post.numberOfPeople}}" required>
+          <label for="minNum" class="sr-only">>Minimum Number of People</label>
+          <input type="number" class="form-control form-control-newcss pr-1" id="minNum" name="minNum"
+            value="{{group.minNum}}" required>
           <div class="invalid-feedback">
             Please fill in!
           </div>
         </div>
 
         <!-- Maximum Number of People -->
-        <div class="col-md-4 col-sm-12 tool-tip-container animateField">
+        <div class="col-md-4 col-sm-12">
           <small class="tool-tip date-tip">Maximum Number of People</small>
-          <label for="numberOfPeople" class="sr-only">>Maximum Number of People</label>
-          <input type="number" class="form-control form-control-newcss pr-1" id="numberOfPeople" name="numberOfPeople"
-            value="{{post.numberOfPeople}}" required>
+          <label for="maxNum" class="sr-only">>Maximum Number of People</label>
+          <input type="number" class="form-control form-control-newcss pr-1" id="maxNum" name="maxNum"
+            value="{{group.maxNum}}" required>
           <div class="invalid-feedback">
             Please fill in!
           </div>
         </div>
 
         <!-- Contact Info-->
-        <div class="col-md-4 col-sm-12 tool-tip-container animateField">
+        <div class="col-md-4 col-sm-12">
           <small class="tool-tip date-tip">Contact Information</small>
-          <label for="category" class="sr-only">Contact Information</label>
-          <select class="form-control form-control-newcss" id="category" name="category">
+          <label for="contactInfo" class="sr-only">Contact Information</label>
+          <select class="form-control form-control-newcss" id="contactInfo" name="contactInfo">
             <option value="phone">Phone</option>
             <option value="mail">Email</option>
           </select>
@@ -122,31 +115,42 @@
         </div>
       </div>
 
+      <br>
+
+      <div class="form-row form-row-newcss">
+        <!-- Product Name -->
+        <div class="col-md-6 col-sm-12">
+          <small class="tool-tip name-tip">Product Name</small>
+          <label for="p_name" class="sr-only">Product Name</label>
+          <input type="text" class="form-control" id="p_name" name="p_name" minlength="1" value="{{group.p_name}}"
+            required>
+          <div class="invalid-feedback">
+            Please fill in!
+          </div>
+        </div>
+
+        <!-- Product Price -->
+        <div class="col-md-6 col-sm-12">
+          <small class="tool-tip name-tip">Product Price</small>
+          <label for="price" class="sr-only">Product Price</label>
+          <input type="number" class="form-control" id="price" name="price" value="{{group.price}}" required>
+          <div class="invalid-feedback">
+            Please fill in!
+          </div>
+        </div>
+      </div>
+
+      <br>
+      
       <!--Content-->
       <div class="form-group form-group-newcss mt-2">
         <small class="tool-tip name-tip">Content</small>
         <label for="content" class="sr-only">Content</label>
-        <textarea class="form-control form-control-newcss" name="content" id="content" rows="3" placeholder="Give some additional description here..."
-          maxlength="60">{{post.content}}</textarea>
+        <textarea class="form-control form-control-newcss" name="content" id="content" rows="3"
+          placeholder="Give some additional description here..." maxlength="60">{{group.content}}</textarea>
       </div>
-
-      <!--Status-->
-      <!--
-      <div class="btn-group btn-group-toggle mb-3 d-flex pt-1 tool-tip-container" data-toggle="buttons">
-        <small class="tool-tip status-tip">Current Status</small>
-        <label class="btn btn-sm btn-secondary {{#if todo.done}}active{{/if}}">
-          <input type="radio" name="status" id="done" value="done" autocomplete="off" {{#if
-            todo.done}}checked{{/if}}>Done
-        </label>
-        <label class="btn btn-sm btn-secondary {{#if todo.notDone}}active{{/if}}">
-          <input type="radio" name="status" id="notDone" value="notDone" autocomplete="off" {{#if
-            todo.notDone}}checked{{/if}}>Undone
-        </label>
-      </div>
-      -->
-
       <hr>
-      <button type="submit" class="btn btn-block todo-submit submit-newgroup-btn">Submit</button>
+      <button type="submit" class="btn btn-block new-submit submit-newgroup-btn">Submit</button>
     </form>
   </div>
 </section>
