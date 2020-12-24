@@ -96,10 +96,10 @@ control+C
 |**Groups**|views / index.handlebars <br/>public / stylesheets / main.css <br/>public / stylesheets / index.css <br/>public / stylesheets / bootstrap.css|
 |**New Group**|views / new.handlebars <br/>public / stylesheets / new.css <br/>public / stylesheets / main.css <br/>public / stylesheets / bootstrap.css|
 |**New Ad**|views / ad.handlebars <br/>public / stylesheets / ad.css|
-|**Account**|views / account.handlebars <br/>public / stylesheets / account.css|
+|**Account**|views / account.handlebars <br/>public / stylesheets / account.css<br/>Front End Demo: https://youtu.be/ZlYDa-TBWTg|
 |**Detail**|views / detail.handlebars <br/>public / stylesheets / detail.css|
-|**-Main Handlers-**|public / stylesheets / bootstrap.css|
-|**-Icoins-**|public / stylesheets / css / all.css|
+|**- Main Handlers -**|public / stylesheets / bootstrap.css|
+|**- Icons -**|public / stylesheets / css / all.css <br/>Source: https://fontawesome.com/license/free|
 
 
 
