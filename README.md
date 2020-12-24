@@ -94,9 +94,9 @@ control+C
 |**Main**|views / main.handlebars <br/>public / stylesheets / main.css|
 |**Login & Register**|views / login.handlebars <br/>views / register.handlebars <br/>public / stylesheets / user.css |
 |**Groups**|views / index.handlebars <br/>public / stylesheets / main.css <br/>public / stylesheets / index.css <br/>public / stylesheets / bootstrap.css|
-|**New Group**|views / new.handlebars <br/>public / stylesheets / new.css <br/>public / stylesheets / main.css <br/>public / stylesheets / bootstrap.css|
+|**New Group**|views / new.handlebars <br/>public / stylesheets / new.css <br/>public / stylesheets / todo_form.css <br/>public / stylesheets / main.css <br/>public / stylesheets / bootstrap.css|
 |**New Ad**|views / ad.handlebars <br/>public / stylesheets / ad.css|
-|**Account**|views / account.handlebars <br/>public / stylesheets / account.css<br/>Front End Demo: https://youtu.be/ZlYDa-TBWTg|
+|**Account**|views / account.handlebars <br/>public / stylesheets / account.css<br/>**Front End Demo: https://youtu.be/ZlYDa-TBWTg **|
 |**Detail**|views / detail.handlebars <br/>public / stylesheets / detail.css|
 |**- Main Handlers -**|public / stylesheets / bootstrap.css|
 |**- Icons -**|public / stylesheets / css / all.css <br/>Source: https://fontawesome.com/license/free|
