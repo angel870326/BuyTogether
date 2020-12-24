@@ -91,13 +91,16 @@ control+C
 
 |UI|File|
 |---|---|
-|**Main**|public / stylesheets / main.css|
+|**Main**|views / main.handlebars <br/>public / stylesheets / main.css|
 |**Login & Register**|views / login.handlebars <br/>views / register.handlebars <br/>public / stylesheets / user.css |
 |**Groups**|views / index.handlebars <br/>public / stylesheets / main.css <br/>public / stylesheets / index.css <br/>public / stylesheets / bootstrap.css|
 |**New Group**|views / new.handlebars <br/>public / stylesheets / new.css <br/>public / stylesheets / main.css <br/>public / stylesheets / bootstrap.css|
-|**New Ad**|views / add.handlebars <br/>public / stylesheets / add.css|
+|**New Ad**|views / ad.handlebars <br/>public / stylesheets / ad.css|
 |**Account**|views / account.handlebars <br/>public / stylesheets / account.css|
 |**Detail**|views / detail.handlebars <br/>public / stylesheets / detail.css|
+|**-Main Handlers-**|public / stylesheets / bootstrap.css|
+|**-Icoins-**|public / stylesheets / css / all.css|
+
 
 
 
