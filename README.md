@@ -111,7 +111,7 @@ control+C
 |Date|Link|
 |---|---|
 |2020/12/22|https://youtu.be/l7fJ8EGcwcQ|
-|2020/12/24|https://youtu.be/ZlYDa-TBWTg|
+|2020/12/24|Account: https://youtu.be/ZlYDa-TBWTg <br/>Final: https://youtu.be/MOTYwAQK-R0|
 
 
 
